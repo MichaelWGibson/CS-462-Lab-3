@@ -38,7 +38,7 @@ ruleset wovyn_base {
     }
     
     if (temp > temperature_threshold) then
-    send_directive("Threshold Violation!!!", {"results": gthing})
+    send_directive("Threshold Violation!!!", {"temp": temp})
     
     fired {
       raise wovyn event "threshold_violation"
